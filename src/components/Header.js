@@ -3,13 +3,15 @@ import logoImg from '../assets/logo.png'
 
 const Header = () => {
     return(
-        <div className='header'>
-            <div className='wrap'>
-                <div className='logo'>
-                    <img src={logoImg} alt='Company logo in green with white background'/>
-                </div>
-            </div>
-        </div>
+        <nav className='navigation'>
+           <div className='nav-left'>
+               <img src={logoImg} alt='company logo in green and white' />
+            </div> 
+           <ul className='nav-right'>
+                <li><a href='/'>Products</a></li>    
+                <li><a href='/'>About us</a></li>    
+            </ul> 
+        </nav>
     )
 }
 

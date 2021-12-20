@@ -1,0 +1,33 @@
+.directory{
+    display: flex;
+    @include flex(row, center, center);
+    min-height: 90vh;
+}
+
+.directory-women,
+.directory-men{
+    flex: 1;
+    height: 90vh;
+    position: relative;
+    @include flex(row, center, center);
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    a{
+        padding: 1rem 2rem;
+        background: white;
+        color: black;
+        border: 2px solid black;
+        transition: all 0.3s ease;
+        &:hover{
+            background: black;
+            color: white; 
+        }
+    }
+}
