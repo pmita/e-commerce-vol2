@@ -1,15 +1,21 @@
 import React from 'react'
-import logoImg from '../assets/logo.png'
+import logoImg from '../assets/logo.png' // ASSETS
+import { Link } from 'react-router-dom' // ROUTER
 
 const Header = () => {
     return(
         <nav className='navigation'>
            <div className='nav-left'>
-               <img src={logoImg} alt='company logo in green and white' />
+               <Link to='/'>
+                    <img src={logoImg} alt='company logo in green and white' />     
+               </Link>
             </div> 
            <ul className='nav-right'>
-                <li><a href='/'>Products</a></li>    
-                <li><a href='/'>About us</a></li>    
+                <li>
+                    <Link to='/register'>
+                        Register
+                    </Link>
+                </li>    
             </ul> 
         </nav>
     )
